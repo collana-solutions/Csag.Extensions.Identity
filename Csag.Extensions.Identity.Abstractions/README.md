@@ -6,7 +6,7 @@ The interfaces and types of [Csag.Extensions.Identity](https://github.com/collan
 
 - `IUserManager<TUser>`: creates and finds users, manages passwords, claims and two-factor authentication.
 - `ISignInManager<TUser>`: checks passwords and whether a user may sign in, with `SignInResponse` and `PreSignInResponse`.
-- `ITokenSignInManager<TUser>`: password, authenticator app and OpenID Connect sign-in, returning a `JsonWebToken`.
+- `ITokenSignInManager<TUser>`: password and authenticator app sign-in, which return a `JsonWebToken`, OpenID Connect sign-in, which returns the user, and `CreateAccessTokenAsync` for that user.
 - `IJwtGenerator<TUser>`: implemented by the application to create the access token from a user and their claims.
 - `IOpenIdConnectTokenFactory`, `OpenIdConnectToken` and `OpenIdConnectTokenValidationOptions`: an ID token with the settings to validate it.
 - `CsagIdentityOptions`, `GoogleOptions` and `PasswordHasherOptions`: the options bound from the `NeolutionIdentity` configuration section.

@@ -32,12 +32,12 @@ services.AddScoped<IJwtGenerator<AppUser>, AppJwtGenerator>();
 | --- | --- |
 | `IUserManager<TUser>` | Creates and finds users, manages passwords, claims and two-factor authentication, with logging |
 | `ISignInManager<TUser>` | Checks passwords and whether a user may sign in |
-| `ITokenSignInManager<TUser>` | Password, authenticator app and OpenID Connect sign-in, and access tokens for a signed-in user |
+| `ITokenSignInManager<TUser>` | Password and authenticator app sign-in, which return a `JsonWebToken`, OpenID Connect sign-in, which returns the user, and `CreateAccessTokenAsync` for that user |
 | `IOpenIdConnectTokenFactory` | Wraps a Google ID token with its validation options, for `ITokenSignInManager<TUser>.OpenIdConnectSignInAsync` |
 
 The application implements `IJwtGenerator<TUser>`, which turns a user and their claims into the access token.
 
-To keep the standard JWT claim names instead of the legacy Microsoft claim types, call `IdentityExtensions.RemoveLegacyClaimMappings()` at startup.
+`IdentityExtensions.RemoveLegacyClaimMappings()` clears the global claim type mappings of `JwtSecurityTokenHandler`, so JWT handlers keep the standard claim names instead of the legacy Microsoft claim types. Do not call it in an application that uses `OpenIdConnectSignInAsync`: that method reads the email address as `ClaimTypes.Email`, which only exists through the mapping, and returns `null` without it.
 
 ### Configuration
 
