@@ -1,4 +1,4 @@
-﻿namespace Neolution.Extensions.Identity.Abstractions.Options
+﻿namespace Csag.Extensions.Identity.Abstractions.Options
 {
     /// <summary>
     /// Options for Google OpenID Connect.

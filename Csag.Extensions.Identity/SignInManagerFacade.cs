@@ -1,9 +1,9 @@
-﻿namespace Neolution.Extensions.Identity
+﻿namespace Csag.Extensions.Identity
 {
     using System.Linq.Expressions;
+    using Csag.Extensions.Identity.Abstractions;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.Logging;
-    using Neolution.Extensions.Identity.Abstractions;
 
     /// <summary>
     /// Provides a facade over the SignInManager with additional logging capabilities.

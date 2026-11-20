@@ -1,4 +1,4 @@
-﻿namespace Neolution.Extensions.Identity.Abstractions
+﻿namespace Csag.Extensions.Identity.Abstractions
 {
     /// <summary>
     /// Represents the result of a sign-in operation.

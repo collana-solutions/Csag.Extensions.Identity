@@ -1,4 +1,4 @@
-﻿namespace Neolution.Extensions.Identity
+﻿namespace Csag.Extensions.Identity
 {
     using System;
     using System.Collections.Generic;
@@ -6,9 +6,9 @@
     using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;
+    using Csag.Extensions.Identity.Abstractions;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.Logging;
-    using Neolution.Extensions.Identity.Abstractions;
 
     /// <inheritdoc />
     public sealed class UserManagerFacade<TUser> : IUserManager<TUser>

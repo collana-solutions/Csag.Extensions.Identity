@@ -1,4 +1,4 @@
-﻿namespace Neolution.Extensions.Identity.Abstractions
+﻿namespace Csag.Extensions.Identity.Abstractions
 {
     using Microsoft.AspNetCore.Identity;
 

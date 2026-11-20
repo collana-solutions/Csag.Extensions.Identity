@@ -1,7 +1,7 @@
-﻿namespace Neolution.Extensions.Identity.Abstractions.OpenIdConnect
+﻿namespace Csag.Extensions.Identity.Abstractions.OpenIdConnect
 {
+    using Csag.Extensions.Identity.Abstractions.Options;
     using Microsoft.Extensions.Options;
-    using Neolution.Extensions.Identity.Abstractions.Options;
 
     /// <inheritdoc />
     public class OpenIdConnectTokenFactory : IOpenIdConnectTokenFactory
@@ -9,14 +9,14 @@
         /// <summary>
         /// The Identity options
         /// </summary>
-        private readonly NeolutionIdentityOptions options;
+        private readonly CsagIdentityOptions options;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenIdConnectTokenFactory"/> class.
         /// </summary>
         /// <param name="options">The options.</param>
         /// <exception cref="System.ArgumentNullException">options</exception>
-        public OpenIdConnectTokenFactory(IOptions<NeolutionIdentityOptions> options)
+        public OpenIdConnectTokenFactory(IOptions<CsagIdentityOptions> options)
         {
             if (options == null)
             {

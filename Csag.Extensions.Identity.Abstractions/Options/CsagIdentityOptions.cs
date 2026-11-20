@@ -1,9 +1,9 @@
-﻿namespace Neolution.Extensions.Identity.Abstractions.Options
+﻿namespace Csag.Extensions.Identity.Abstractions.Options
 {
     /// <summary>
-    /// Neolution Identity Options
+    /// Csag Identity options, bound from the <c>NeolutionIdentity</c> configuration section.
     /// </summary>
-    public class NeolutionIdentityOptions
+    public class CsagIdentityOptions
     {
         /// <summary>
         /// Gets or sets the Google options.

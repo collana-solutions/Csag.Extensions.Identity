@@ -1,7 +1,7 @@
-﻿namespace Neolution.Extensions.Identity.Abstractions
+﻿namespace Csag.Extensions.Identity.Abstractions
 {
+    using Csag.Extensions.Identity.Abstractions.OpenIdConnect;
     using Microsoft.AspNetCore.Identity;
-    using Neolution.Extensions.Identity.Abstractions.OpenIdConnect;
 
     /// <summary>
     /// The token-based "SignInManager".

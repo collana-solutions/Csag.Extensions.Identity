@@ -1,10 +1,10 @@
-﻿namespace Neolution.Extensions.Identity
+﻿namespace Csag.Extensions.Identity
 {
+    using Csag.Extensions.Identity.Abstractions.Options;
     using Microsoft.Extensions.Options;
-    using Neolution.Extensions.Identity.Abstractions.Options;
 
     /// <inheritdoc />
-    public class NeolutionIdentityOptionsValidator : IValidateOptions<NeolutionIdentityOptions>
+    public class CsagIdentityOptionsValidator : IValidateOptions<CsagIdentityOptions>
     {
         /// <summary>
         /// The minimum allowed work factor
@@ -16,7 +16,7 @@
         private const int MinWorkFactor = 12;
 
         /// <inheritdoc />
-        public ValidateOptionsResult Validate(string? name, NeolutionIdentityOptions options)
+        public ValidateOptionsResult Validate(string? name, CsagIdentityOptions options)
         {
             if (options.PasswordHasher.BCryptWorkFactor < MinWorkFactor)
             {

@@ -1,14 +1,14 @@
-﻿namespace Neolution.Extensions.Identity
+﻿namespace Csag.Extensions.Identity
 {
     using System.IdentityModel.Tokens.Jwt;
     using System.Security.Claims;
+    using Csag.Extensions.Identity.Abstractions;
+    using Csag.Extensions.Identity.Abstractions.OpenIdConnect;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.IdentityModel.Protocols;
     using Microsoft.IdentityModel.Protocols.OpenIdConnect;
     using Microsoft.IdentityModel.Tokens;
-    using Neolution.Extensions.Identity.Abstractions;
-    using Neolution.Extensions.Identity.Abstractions.OpenIdConnect;
-    using JsonWebToken = Neolution.Extensions.Identity.Abstractions.JsonWebToken;
+    using JsonWebToken = Csag.Extensions.Identity.Abstractions.JsonWebToken;
 
     /// <inheritdoc />
     public sealed class TokenSignManager<TUser> : ITokenSignInManager<TUser>

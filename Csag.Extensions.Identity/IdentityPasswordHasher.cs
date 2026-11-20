@@ -1,8 +1,8 @@
-﻿namespace Neolution.Extensions.Identity
+﻿namespace Csag.Extensions.Identity
 {
+    using Csag.Extensions.Identity.Abstractions.Options;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.Options;
-    using Neolution.Extensions.Identity.Abstractions.Options;
 
     /// <summary>
     /// Password hashing implementation for the ASP.NET Core Identity framework
@@ -21,7 +21,7 @@
         /// Initializes a new instance of the <see cref="IdentityPasswordHasher{TUserAccount}"/> class.
         /// </summary>
         /// <param name="options">The options.</param>
-        public IdentityPasswordHasher(IOptions<NeolutionIdentityOptions> options)
+        public IdentityPasswordHasher(IOptions<CsagIdentityOptions> options)
         {
             this.workFactor = options.Value.PasswordHasher.BCryptWorkFactor;
         }

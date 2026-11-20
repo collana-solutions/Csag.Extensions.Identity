@@ -1,4 +1,4 @@
-﻿namespace Neolution.Extensions.Identity.Abstractions.OpenIdConnect
+﻿namespace Csag.Extensions.Identity.Abstractions.OpenIdConnect
 {
     /// <summary>
     /// The OpenID Connect token factory.

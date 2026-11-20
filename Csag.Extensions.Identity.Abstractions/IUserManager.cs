@@ -1,4 +1,4 @@
-﻿namespace Neolution.Extensions.Identity.Abstractions
+﻿namespace Csag.Extensions.Identity.Abstractions
 {
     using System.Collections.Generic;
     using System.Security.Claims;

@@ -1,14 +1,14 @@
 ﻿namespace Microsoft.Extensions.DependencyInjection
 {
     using System.IdentityModel.Tokens.Jwt;
+    using Csag.Extensions.Identity;
+    using Csag.Extensions.Identity.Abstractions;
+    using Csag.Extensions.Identity.Abstractions.OpenIdConnect;
+    using Csag.Extensions.Identity.Abstractions.Options;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection.Extensions;
     using Microsoft.Extensions.Options;
-    using Neolution.Extensions.Identity;
-    using Neolution.Extensions.Identity.Abstractions;
-    using Neolution.Extensions.Identity.Abstractions.OpenIdConnect;
-    using Neolution.Extensions.Identity.Abstractions.Options;
 
     /// <summary>
     /// Extension methods for services working with ASP.NET Core Identity.
@@ -21,7 +21,7 @@
         /// <typeparam name="TDbContext">The type of the database context.</typeparam>
         /// <typeparam name="TUserAccount">The type of the user account.</typeparam>
         /// <param name="services">The services.</param>
-        public static void AddNeolutionIdentity<TDbContext, TUserAccount>(this IServiceCollection services)
+        public static void AddCsagIdentity<TDbContext, TUserAccount>(this IServiceCollection services)
             where TDbContext : DbContext
             where TUserAccount : IdentityUser<Guid>
         {
@@ -39,12 +39,14 @@
 
             services.TryAddScoped<SignInManager<TUserAccount>>();
 
-            services.AddOptions<NeolutionIdentityOptions>()
+            // App settings, environment variables and secret stores of deployed applications use this
+            // section name, so it does not follow the package name.
+            services.AddOptions<CsagIdentityOptions>()
                 .Configure<IConfiguration>((options, configuration) =>
                 {
                     configuration.GetSection("NeolutionIdentity").Bind(options);
                 });
-            services.AddSingleton<IValidateOptions<NeolutionIdentityOptions>, NeolutionIdentityOptionsValidator>();
+            services.AddSingleton<IValidateOptions<CsagIdentityOptions>, CsagIdentityOptionsValidator>();
 
             services.Configure<IdentityOptions>(options =>
             {
