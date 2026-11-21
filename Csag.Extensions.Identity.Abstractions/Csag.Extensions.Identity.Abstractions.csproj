@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <Description>Interfaces and options of Csag.Extensions.Identity: IUserManager, ISignInManager, ITokenSignInManager and IJwtGenerator for ASP.NET Core Identity users with Guid keys, the JsonWebToken and sign-in response types, and the OpenID Connect token types.</Description>
+    <PackageTags>identity aspnetcore authentication jwt openid-connect abstractions</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="10.0.7" />
+    <PackageReference Include="Neolution.CodeAnalysis" Version="3.2.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
