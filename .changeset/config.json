@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@4.0.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "collana-solutions/Csag.Extensions.Identity" }
+  ],
+  "commit": false,
+  "fixed": [
+    [
+      "@collana-solutions/csag-extensions-identity",
+      "@collana-solutions/csag-extensions-identity-abstractions"
+    ]
+  ],
+  "linked": [],
+  "access": "restricted",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": [],
+  "privatePackages": { "version": true, "tag": true }
+}

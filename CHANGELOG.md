@@ -1,11 +1,9 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+Releases up to 1.0.0, published as `Neolution.Extensions.Identity` and `Neolution.Extensions.Identity.Abstractions`. From 2.0.0 on, each package has its own changelog: `Csag.Extensions.Identity/CHANGELOG.md` and `Csag.Extensions.Identity.Abstractions/CHANGELOG.md`.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [Unreleased]
 
 ## [1.0.0] - 2026-05-06
 
@@ -70,7 +68,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replaced `JsonWebToken` with custom implementation which uses `DateTimeOffset` for the expiration date
 - Replaced Google-specific OpenID Connect implementation with a generic one that can be extended in the future
 
-[Unreleased]: https://github.com/neolution-ch/Neolution.Extensions.Identity/compare/1.0.0...HEAD
 [1.0.0]: https://github.com/neolution-ch/Neolution.Extensions.Identity/compare/0.6.0...1.0.0
 [0.6.0]: https://github.com/neolution-ch/Neolution.Extensions.Identity/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/neolution-ch/Neolution.Extensions.Identity/compare/0.4.0...0.5.0
