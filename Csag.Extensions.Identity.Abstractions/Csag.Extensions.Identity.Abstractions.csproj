@@ -4,7 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
     <Description>Interfaces and options of Csag.Extensions.Identity: IUserManager, ISignInManager, ITokenSignInManager and IJwtGenerator for ASP.NET Core Identity users with Guid keys, the JsonWebToken and sign-in response types, and the OpenID Connect token types.</Description>
     <PackageTags>identity aspnetcore authentication jwt openid-connect abstractions</PackageTags>
   </PropertyGroup>
