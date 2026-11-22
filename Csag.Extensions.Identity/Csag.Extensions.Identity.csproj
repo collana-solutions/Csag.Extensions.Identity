@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
     <IsPackable>true</IsPackable>
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
     <Description>ASP.NET Core Identity with Entity Framework Core stores and BCrypt password hashing, plus token-based sign-in: password and authenticator app sign-in return a JSON Web Token from your IJwtGenerator, and OpenID Connect ID tokens, such as Google's, sign in existing users.</Description>
     <PackageTags>identity aspnetcore authentication jwt bcrypt openid-connect entityframeworkcore</PackageTags>
   </PropertyGroup>
