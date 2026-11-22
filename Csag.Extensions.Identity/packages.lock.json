@@ -8,6 +8,16 @@
         "resolved": "4.1.0",
         "contentHash": "5YT3DKllmtkyW68PjURu/V1TOe4MKiByKwsRNVcfYE1S5KuFTeozdmKzyNzolKiQF391OXCaQtINvYT3j1ERzQ=="
       },
+      "Csag.CodeAnalysis": {
+        "type": "Direct",
+        "requested": "[3.2.2, )",
+        "resolved": "3.2.2",
+        "contentHash": "d/9r7cIdmyd7aXEO2+u95x1TIou6skNTFmzQPuKeY89S8TW7vseXKw24fhzC40z6FQVFcjNj/NBwZKW8VUpnjg==",
+        "dependencies": {
+          "SonarAnalyzer.CSharp": "9.20.0.85982",
+          "StyleCop.Analyzers.Unstable": "1.2.0.556"
+        }
+      },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
         "type": "Direct",
         "requested": "[10.0.7, )",
@@ -31,16 +41,6 @@
         "dependencies": {
           "Microsoft.IdentityModel.Protocols": "8.18.0",
           "System.IdentityModel.Tokens.Jwt": "8.18.0"
-        }
-      },
-      "Neolution.CodeAnalysis": {
-        "type": "Direct",
-        "requested": "[3.2.2, )",
-        "resolved": "3.2.2",
-        "contentHash": "9eBWPh7DNlBje/vH1q5Z4Q5FjwahYavPE2NsJO78IRcQ0xDrhor2FY8DxLA26BsweMqn4Ej0cN5dnyFexjl+ww==",
-        "dependencies": {
-          "SonarAnalyzer.CSharp": "9.20.0.85982",
-          "StyleCop.Analyzers.Unstable": "1.2.0.556"
         }
       },
       "Microsoft.EntityFrameworkCore": {
